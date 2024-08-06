@@ -1,0 +1,243 @@
+/* Reset margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* PAGE SECTIONS */
+body {
+  color: #444;
+  font-family: sans-serif;
+  border-top: 10px solid #1098ad;
+  position: relative;
+  border-bottom: 10px solid #1098ad;
+}
+
+/* Container for centering content */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* Main header styling */
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img-parag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+nav {
+  font-size: 18px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Flexbox for layout */
+.flexo {
+  display: flex;
+  gap: 75px;
+  align-items: flex-start;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  flex: 0 0 300px;
+  padding: 50px 0;
+}
+
+article {
+  flex: 0 0 825px;
+}
+
+.just-magrin {
+  margin-bottom: 50px;
+}
+
+/* Related posts section */
+.related-post {
+  display: flex;
+  font-size: 18px;
+  gap: 10px;
+  justify-content: flex-start;
+  font-weight: bold;
+}
+
+.momo {
+  margin-bottom: 30px;
+}
+
+/* Lists */
+ul,
+ol {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+.related {
+  list-style: none;
+}
+
+/* Author and copyright styles */
+#author {
+  font-style: italic;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+.related-author {
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* Link styling */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+/* Image styling */
+.post-img {
+  width: 100%;
+  height: auto;
+}
+
+/* Navigation link styling */
+nav a:link {
+  margin-right: 30px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+/* Button styling */
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+/* First letter and first line styling */
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+/* h3 + p::first-line {
+  color: red;
+} */
+
+h2::before {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
+
+/* Grid layout */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+}
+
+.main-header {
+  grid-column: 1/-1;
+}
+
+footer {
+  grid-column: 1/-1;
+}
+
+aside {
+  align-self: start;
+}
