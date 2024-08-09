@@ -140,8 +140,12 @@ h3 {
 .chair-price {
   display: flex;
   justify-content: space-between;
+  font-size: 20px;
+
+  /* / 16 / 18 / 20 / 24  */
 }
 
 footer {
   margin-bottom: 48px;
+  font-size: 14px;
 }
