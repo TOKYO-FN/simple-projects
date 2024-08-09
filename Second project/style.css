@@ -31,6 +31,8 @@ section {
 
 h2 {
   margin-bottom: 48px;
+  font-size: 36px;
+  letter-spacing: -0.5px;
 }
 
 .grid-3-cols {
@@ -53,12 +55,15 @@ header {
 
 .header-text-box {
   align-self: center;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 h1 {
   margin-bottom: 24px;
   font-size: 44px;
   line-height: 1.1;
+  letter-spacing: -1px;
 }
 
 .header-text {
@@ -75,9 +80,12 @@ img {
 
 .features-title {
   margin-bottom: 16px;
+  font-size: 20px;
 }
 
 .features-text {
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 /* TESTIMONIAL */
@@ -91,11 +99,14 @@ img {
 
 .testimonial-box h2 {
   margin-bottom: 24px;
+  font-size: 24px;
 }
 
 .testimonial-text {
   font-style: italic;
   margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 /* CHAIRS */
