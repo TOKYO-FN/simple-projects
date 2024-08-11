@@ -28,6 +28,7 @@ GREY COLOR: #343a40
 body {
   font-family: "Inter", sans-serif;
   color: #343a40;
+  border-bottom: 5px solid #087f5b;
 }
 
 .container {
@@ -129,7 +130,7 @@ img {
 .testimonial-section {
   background-color: #087f5b;
   color: #fff;
-  padding: 16px 12px;
+  padding: 24px;
 }
 
 .testimonial-box {
