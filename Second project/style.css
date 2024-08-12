@@ -28,7 +28,7 @@ GREY COLOR: #343a40
 body {
   font-family: "Inter", sans-serif;
   color: #343a40;
-  border-bottom: 5px solid #087f5b;
+  border-bottom: 8px solid #087f5b;
 }
 
 .container {
@@ -114,6 +114,10 @@ img {
 
 /* FEATURES */
 .features-icon {
+  height: 32px;
+  width: 32px;
+  margin-bottom: 15px;
+  stroke: #087f5b;
 }
 
 .features-title {
