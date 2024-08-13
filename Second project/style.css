@@ -36,6 +36,10 @@ body {
   margin: 0 auto;
 }
 
+img {
+  border-radius: 12px;
+}
+
 header,
 section {
   margin-bottom: 48px;
