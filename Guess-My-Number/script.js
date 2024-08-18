@@ -12,6 +12,7 @@ let valueInBox = document.querySelector('.guess');
 let score = document.querySelector('.score');
 let highscore = document.querySelector('.highscore');
 let message = document.querySelector('.message');
+let bodyElement = document.getElementsByTagName('BODY')[0];
 
 let clickFunc = function () {
   let value = valueInBox.value;
@@ -19,7 +20,7 @@ let clickFunc = function () {
     console.log('🎉 Correct number!');
     message.textContent = '🎉 Correct number!';
     highscore.textContent = score.textContent;
-    document.getElementsByTagName('BODY')[0].style.backgroundColor = 'green';
+    bodyElement.style.backgroundColor = 'green';
     return;
   } else if (value > answer) {
     message.textContent = '📉 Too high!';
@@ -35,7 +36,7 @@ let againFunc = function () {
   message.textContent = 'Start guessing...';
   score.textContent = 20;
   valueInBox.value = '';
-  document.getElementsByTagName('BODY')[0].style.backgroundColor = '#222';
+  bodyElement.style.backgroundColor = '#222';
 };
 
 console.log(answer);
