@@ -1,16 +1,19 @@
-'use strict';
+('use strict');
+let answer = Math.floor(Math.random() * 5) + 1;
 
-console.log((document.querySelector('.message').style.color = 'cyan'));
+console.log(answer);
+let check = function () {
+  if (document.querySelector('.guess').value == answer) {
+    document.querySelector('.message').textContent = 'Correct!';
+    console.log('Correct');
+    console.log(typeof document.querySelector('.guess').value);
+  } else console.log('Not correct');
+};
 
-document.querySelector('.number').textContent = 18;
-document.querySelector('.score').textContent = 10;
+// console.log((document.querySelector('.message').style.color = 'cyan'));
 
-document.querySelector('.guess').value = 20;
+document.querySelector('.check').addEventListener('click', check);
 
-document.querySelector('.check').addEventListener('click', function () {
-  console.log('Button was clicked');
-});
-
-document.querySelector('.again').addEventListener('click', function () {
-  console.log('again was clicked');
-});
+// document.querySelector('.again').addEventListener('click', function () {
+//   console.log('again was clicked');
+// });
