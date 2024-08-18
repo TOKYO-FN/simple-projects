@@ -1,22 +1,4 @@
 'use strict';
-// let answer = Math.floor(Math.random() * 5) + 1;
-
-// console.log(answer);
-// let check = function () {
-//   if (document.querySelector('.guess').value == answer) {
-//     document.querySelector('.message').textContent = 'Correct!';
-//     console.log('Correct');
-//     console.log(typeof document.querySelector('.guess').value);
-//   } else console.log('Not correct');
-// };
-
-// // console.log((document.querySelector('.message').style.color = 'cyan'));
-
-// document.querySelector('.check').addEventListener('click', check);
-
-// // document.querySelector('.again').addEventListener('click', function () {
-// //   console.log('again was clicked');
-// // });
 
 // TODO 📉 Too low!
 // TODO 📈 Too high!
@@ -25,6 +7,7 @@
 // TODO awl ma bgyb el rakam s7 byb2a da el highscore
 let answer = Math.round(Math.random() * 20) + 1;
 let checkButton = document.querySelector('.check');
+let againButton = document.querySelector('.again');
 let valueInBox = document.querySelector('.guess');
 let score = document.querySelector('.score');
 let highscore = document.querySelector('.highscore');
@@ -32,11 +15,11 @@ let message = document.querySelector('.message');
 
 let clickFunc = function () {
   let value = valueInBox.value;
-  // TODO el awl a4of el raqam lw hwa s7 🎉 Correct number!
   if (answer == value) {
     console.log('🎉 Correct number!');
     message.textContent = '🎉 Correct number!';
     highscore.textContent = score.textContent;
+    document.getElementsByTagName('BODY')[0].style.backgroundColor = 'green';
     return;
   } else if (value > answer) {
     message.textContent = '📉 Too high!';
@@ -47,5 +30,15 @@ let clickFunc = function () {
   }
   score.textContent = Number(score.textContent) - 1;
 };
+
+let againFunc = function () {
+  message.textContent = 'Start guessing...';
+  score.textContent = 20;
+  valueInBox.value = '';
+  document.getElementsByTagName('BODY')[0].style.backgroundColor = '#222';
+};
+
 console.log(answer);
+
+againButton.addEventListener('click', againFunc);
 checkButton.addEventListener('click', clickFunc);
