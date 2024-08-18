@@ -27,7 +27,7 @@ let answer = Math.round(Math.random() * 20) + 1;
 let checkButton = document.querySelector('.check');
 let valueInBox = document.querySelector('.guess');
 let score = document.querySelector('.score');
-let highscore = 0;
+let highscore = document.querySelector('.highscore');
 let message = document.querySelector('.message');
 
 let clickFunc = function () {
@@ -36,6 +36,7 @@ let clickFunc = function () {
   if (answer == value) {
     console.log('🎉 Correct number!');
     message.textContent = '🎉 Correct number!';
+    highscore.textContent = score.textContent;
     return;
   } else if (value > answer) {
     message.textContent = '📉 Too high!';
