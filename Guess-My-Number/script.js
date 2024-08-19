@@ -81,31 +81,21 @@ document.querySelector('.check').addEventListener('click', function () {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
     }
-  }
-  // when the player guess number higher than the secret number
-  else if (guess > secretNumber) {
+  } else {
     if (score <= 1) {
       document.querySelector('.message').textContent = '💥 Game Over!';
       document.getElementsByTagName('body')[0].style.backgroundColor =
         '#a94545';
       score = 0;
     } else {
-      document.querySelector('.message').textContent = '📈 Too high!';
       score--;
+      document.querySelector('.score').textContent = score;
+      if (guess > secretNumber) {
+        document.querySelector('.message').textContent = '📈 Too high!';
+      } else {
+        document.querySelector('.message').textContent = '📉 Too low!';
+      }
     }
-    document.querySelector('.score').textContent = score;
-  }
-  // when the player guess number lower than the secret number
-  else if (guess < secretNumber) {
-    if (score <= 1) {
-      document.querySelector('.message').textContent = '💥 Game Over!';
-      document.getElementsByTagName('body')[0].style.backgroundColor = 'red';
-      score = 0;
-    } else {
-      document.querySelector('.message').textContent = '📉 Too Low!';
-      score--;
-    }
-    document.querySelector('.score').textContent = score;
   }
 });
 
