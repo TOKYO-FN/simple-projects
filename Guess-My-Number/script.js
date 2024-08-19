@@ -17,9 +17,7 @@ document.querySelector('.check').addEventListener('click', function () {
   console.log(guess, typeof guess);
 
   // when there is no input
-  if (!guess) {
-    document.querySelector('.message').textContent = '⛔ No Number!';
-  }
+  if (!guess) document.querySelector('.message').textContent = '⛔ No Number!';
   // when the player wins
   else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
@@ -31,7 +29,7 @@ document.querySelector('.check').addEventListener('click', function () {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
     }
-  } else {
+  } else if (guess !== secretNumber) {
     if (score <= 1) {
       document.querySelector('.message').textContent = '💥 Game Over!';
       document.getElementsByTagName('body')[0].style.backgroundColor =
