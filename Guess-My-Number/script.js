@@ -87,6 +87,7 @@ document.querySelector('.check').addEventListener('click', function () {
       document.getElementsByTagName('body')[0].style.backgroundColor =
         '#a94545';
       score = 0;
+      document.querySelector('.score').textContent = score;
     } else {
       score--;
       document.querySelector('.score').textContent = score;
