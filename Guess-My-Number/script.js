@@ -29,7 +29,7 @@ document.querySelector('.check').addEventListener('click', function () {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
     }
-  } else if (guess !== secretNumber) {
+  } else {
     if (score <= 1) {
       document.querySelector('.message').textContent = '💥 Game Over!';
       document.getElementsByTagName('body')[0].style.backgroundColor =
